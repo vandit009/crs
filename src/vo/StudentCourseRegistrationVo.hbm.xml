@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="vo.StudentCourseRegistrationVo" table="StudentCourseRegistration">
+
+		<id name="id" type="int" column="StudentCourseRegistrationID">
+			<generator class="increment" />
+		</id>
+		
+		
+		<many-to-one name="s1" class="vo.ScheduleVo" column="ScheduleID" ></many-to-one>
+		<many-to-one name="s2" class="vo.LoginVo" column="LoginID" ></many-to-one>
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>

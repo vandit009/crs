@@ -1,0 +1,8 @@
+menu- #32C2CD url(../img/bg-default.jpg) !important;
+
+header- #4e4e4e url("../img/top-bg.jpg") repeat-x !important;
+
+login header- background: url("../img/top-bg.jpg") repeat-x;
+
+lock avatar row-    background: #30c1cb;
+

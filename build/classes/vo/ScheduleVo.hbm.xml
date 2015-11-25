@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="vo.ScheduleVo" table="Schedule">
+
+		<id name="id" type="int" column="ScheduleID">
+			<generator class="increment" />
+		</id>
+		<property name="day">
+			<column name="Day"  />
+		</property>
+		<property name="st">
+			<column name="StartTime"  />
+		</property>
+		<property name="et">
+			<column name="EndTime"  />
+		</property>
+		<property name="startdate">
+			<column name="StartDate" />
+		</property>
+		
+		<property name="enddate">
+			<column name="EndDate" />
+		</property>
+		
+		<many-to-one name="s1" class="vo.DepartmentVo" column="DepartmentID" ></many-to-one>
+		
+		<many-to-one name="s2" class="vo.CourseVo" column="CourseID" ></many-to-one>
+		
+		
+	</class>
+</hibernate-mapping>

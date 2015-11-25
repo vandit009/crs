@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="vo.StudentRegistrationVo" table="StudentRegistration">
+
+		<id name="id" type="int" column="StudentRegistrationID">
+			<generator class="increment" />
+		</id>
+		<property name="studentnumber">
+			<column name="StudentNumber"  />
+		</property>
+		<property name="program">
+			<column name="Program"  />
+		</property>
+		<property name="fn">
+			<column name="FirstName"  />
+		</property>
+		<property name="ln">
+			<column name="LastName" />
+		</property>
+		<property name="email">
+			<column name="Email" />
+		</property>
+		<property name="username">
+			<column name="UserName" />
+		</property>
+		<property name="pass">
+			<column name="Password" />
+		</property>
+		<property name="conpass">
+			<column name="ConfirmPassword" />
+		</property>
+		
+		<many-to-one name="s2" class="vo.LoginVo" column="LoginID"></many-to-one>
+		
+		
+	</class>
+</hibernate-mapping>
